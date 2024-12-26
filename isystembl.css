@@ -1,0 +1,558 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a23;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* General Navbar Styling */
+.header {
+    background-color: #0d0d2b;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 2rem;
+}
+
+/* Navbar Wrapper */
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    border-radius: 50%; /* Circular logo if desired */
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00d8ff; /* Your theme color */
+}
+
+/* Navigation Links */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #c5c6c7;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #66fcf1;
+}
+
+/* Actions (Explore Button and Language Select) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cta-button {
+    padding: 0.5rem 1rem;
+    background-color: #66fcf1;
+    border: none;
+    border-radius: 5px;
+    color: #0b0c10;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #45a29e;
+}
+
+.language-select {
+    background-color: #c5c6c7;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 88vh; /* You can adjust this if necessary */
+    background-image: url(./sate_upscaled.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center;
+    background-attachment: scroll; /* Allows the image to move with the content */
+    color: #ffffff;
+}
+
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem; /* Adds spacing between items */
+    padding: 2rem 1rem;
+    background-color: #070707;
+}
+
+.category {
+    text-align: center;
+    flex: 1 1 calc(33.33% - 2rem); /* Responsive sizing, 3 items per row */
+    max-width: 300px; /* Optional, to prevent overly large items */
+    border: 1px solid #00d8ff; /* Optional, for styling */
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #111111; /* Card background for contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    color: #00d8ff;
+    margin-bottom: 0.5rem;
+}
+
+.category p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #0a0a23;
+}
+
+.product-card {
+    background-color: #1a1a3b;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #00d8ff;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-card button {
+    background-color: #00d8ff;
+    color: #0a0a23;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #008fb3;
+}
+
+/* Footer General Styling */
+footer {
+    padding: 2rem 1rem;
+    background-color: #070707;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the footer */
+}
+
+/* Newsletter Section */
+.newsletter {
+    flex: 1 1 calc(50% - 2rem); /* Half width, responsive */
+    min-width: 300px; /* Prevent shrinking */
+    text-align: left; /* Align text for better readability */
+}
+
+.newsletter h3 {
+    color: #00d8ff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.form-group input {
+    flex: 1 1 auto;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group button {
+    padding: 0.5rem 1rem;
+    background-color: #00d8ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: #aaaaaa;
+}
+
+/* Footer Links Section */
+.footer-links {
+    flex: 1 1 calc(50% - 23rem); /* Half width */
+    min-width: 400px;
+    text-align: left;
+}
+
+.footer-links .column h4 {
+    color: #00d8ff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-links .column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links .column ul li {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Social Media Icons */
+.social-media {
+    flex: 1 1 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-media a {
+    color: #00d8ff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-media a:hover {
+    transform: scale(1.2); /* Slight scaling effect */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    flex: 1 1 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.footer-bottom ul li {
+    color: #ffffff;
+}
+
+.footer-bottom ul li a {
+    text-decoration: none;
+    color: #00d8ff;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Footer Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .newsletter, .footer-links {
+        flex: 1 1 100%; /* Full width for each section */
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center; /* Center icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-group {
+        flex-direction: column; /* Stack input and button */
+        align-items: stretch;
+    }
+
+    .form-group button {
+        width: 100%; /* Full width button */
+    }
+}
+
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        background-color: #0d0d2b;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu on toggle */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .actions {
+        display: none; /* Hide actions by default */
+    }
+
+    /* Align logo and hamburger menu */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        color: #fff;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        height: 75vh; /* Adjust height for smaller screens */
+        background-size: cover; /* Keeps the image responsive */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+    /* categories */
+    .categories {
+        padding: 2rem; /* Adjust padding for smaller screens */
+        gap: 1.5rem;
+    }
+
+    .category {
+        flex: 1 1 calc(50% - 1rem); /* 2 items per row on medium screens */
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column; /* Stack footer sections */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-column {
+        text-align: center; /* Center text in footer columns */
+        margin-bottom: 1rem;
+    }
+
+    .footer-column h3 {
+        font-size: 1.2rem; /* Adjust heading size */
+    }
+
+    .footer-column ul {
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        justify-content: center;
+    }
+
+    .footer-column ul li a {
+        font-size: 0.95rem; /* Adjust link font size */
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-column.address {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header .navbar {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 65vh; /* Further adjust for very small screens */
+        background-size: cover; /* Ensures the image still looks good */
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    /* categories*/
+    .categories {
+        flex-direction: column; /* Stack categories vertically */
+        padding: 1.5rem;
+    }
+
+    .category {
+        flex: 1 1 100%; /* Full width for small screens */
+        margin-bottom: 1rem;
+    }
+
+    .footer {
+        font-size: 0.85rem; /* Decrease overall footer text size */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .footer-column h3 {
+        font-size: 1rem; /* Adjust heading size further */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 0.5rem; /* Add spacing between list items */
+    }
+
+    .footer-column ul li a {
+        font-size: 0.85rem; /* Smaller link font size for compact view */
+    }
+
+    .social-links li i {
+        font-size: 1rem; /* Adjust icon size */
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem; /* Smaller footer-bottom font size */
+        text-align: center; /* Center-align footer-bottom text */
+    }
+
+    .footer-bottom p {
+        margin: 0.5rem 0; /* Add spacing around text */
+    }
+}
